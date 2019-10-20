@@ -7,33 +7,25 @@ public class ConverterTest {
 
     @Test
     public void rubleToEuro() {
-        int in = 140;
-        int expected = 2;
-        int out = Converter.rubleToEuro(in);
-        Assert.assertEquals(expected, out);
+        test(2, Converter.rubleToEuro(140));
     }
 
     @Test
     public void rubleToDollar() {
-        int in = 180;
-        int expected = 3;
-        int out = Converter.rubleToDollar(in);
-        Assert.assertEquals(expected, out);
+        test(3, Converter.rubleToDollar(180));
     }
 
     @Test
     public void dollarToRuble() {
-        int in = 3;
-        int expected = 180;
-        int out = Converter.dollarToRuble(in);
-        Assert.assertEquals(expected, out);
+        test(180, Converter.dollarToRuble(3));
     }
 
     @Test
     public void euroToRuble() {
-        int in = 2;
-        int expected = 140;
-        int out = Converter.euroToRuble(in);
+        test(140, Converter.euroToRuble(2));
+    }
+
+    private void test(int expected, int out) {
         Assert.assertEquals(expected, out);
     }
 
